@@ -183,7 +183,7 @@ export const getMockData = () => {
   };
 };
 
-// Simulate API calls
+// Updated API mock functions to be compatible with React Query
 export const fetchFarmerProfile = () => {
   return new Promise<Farmer>((resolve) => {
     setTimeout(() => resolve(farmers[0]), 500);
@@ -196,14 +196,18 @@ export const fetchCrops = () => {
   });
 };
 
-export const fetchFertilizerRecommendations = (cropId?: string) => {
+// Updated to handle React Query context object
+export const fetchFertilizerRecommendations = () => {
+  return new Promise<FertilizerRecommendation[]>((resolve) => {
+    setTimeout(() => resolve(fertilizerRecommendations), 500);
+  });
+};
+
+// Function to filter fertilizer recommendations by cropId
+export const fetchFertilizerRecommendationsByCropId = (cropId: string) => {
   return new Promise<FertilizerRecommendation[]>((resolve) => {
     setTimeout(() => {
-      if (cropId) {
-        resolve(fertilizerRecommendations.filter(rec => rec.cropId === cropId));
-      } else {
-        resolve(fertilizerRecommendations);
-      }
+      resolve(fertilizerRecommendations.filter(rec => rec.cropId === cropId));
     }, 500);
   });
 };
@@ -226,14 +230,18 @@ export const fetchSustainabilityMetrics = () => {
   });
 };
 
-export const fetchCropPlans = (farmerId?: string) => {
+// Updated to handle React Query context object
+export const fetchCropPlans = () => {
+  return new Promise<CropPlan[]>((resolve) => {
+    setTimeout(() => resolve(cropPlans), 500);
+  });
+};
+
+// Function to filter crop plans by farmerId
+export const fetchCropPlansByFarmerId = (farmerId: string) => {
   return new Promise<CropPlan[]>((resolve) => {
     setTimeout(() => {
-      if (farmerId) {
-        resolve(cropPlans.filter(plan => plan.farmerId === farmerId));
-      } else {
-        resolve(cropPlans);
-      }
+      resolve(cropPlans.filter(plan => plan.farmerId === farmerId));
     }, 500);
   });
 };

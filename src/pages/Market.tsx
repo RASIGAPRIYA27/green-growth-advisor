@@ -20,7 +20,9 @@ const Market = () => {
       name: trend.cropName,
       price: trend.price,
       demand: trend.demandScore,
-      priceChange: trend.priceChange
+      priceChange: trend.priceChange,
+      // Add a color field for the fill property
+      color: trend.priceChange >= 0 ? "#4E9F3D" : "#e74c3c"
     }));
   };
 
@@ -106,8 +108,10 @@ const Market = () => {
                     <Legend />
                     <Bar 
                       dataKey="priceChange" 
-                      fill={(data) => (data.priceChange >= 0 ? "#4E9F3D" : "#e74c3c")}
+                      fill="#4E9F3D"
                       name="Price Change (%)" 
+                      // Use the color field from each data point
+                      fillOpacity={0.8}
                     />
                   </BarChart>
                 </ResponsiveContainer>
