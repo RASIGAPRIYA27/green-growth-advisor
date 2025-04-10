@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,30 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for our green growth advisor
+				green: {
+					100: '#E8F5E9',
+					200: '#C8E6C9',
+					300: '#A5D6A7',
+					400: '#81C784',
+					500: '#4E9F3D',
+					600: '#1E5631',
+					700: '#2E7D32',
+					800: '#1B5E20',
+					900: '#0A3815',
+				},
+				earthy: {
+					100: '#F1F8E9',
+					200: '#DCEDC8',
+					300: '#D8E9A8',
+					400: '#C5E1A5',
+					500: '#A9B388',
+					600: '#5F7161',
+					700: '#9CCC65',
+					800: '#7CB342',
+					900: '#558B2F',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
