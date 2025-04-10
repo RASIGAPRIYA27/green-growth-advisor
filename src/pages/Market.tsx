@@ -50,7 +50,7 @@ const Market = () => {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="price" fill="#4E9F3D" name="Price ($)" />
+                    <Bar dataKey="price" fill="#4E9F3D" name="Price (₹)" />
                   </BarChart>
                 </ResponsiveContainer>
               )}
