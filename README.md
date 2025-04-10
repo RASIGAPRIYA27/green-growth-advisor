@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+# AI-Driven Sustainable Agriculture System
 
-## Project info
+## 🌱 Introduction
+Agriculture is essential for human survival, but traditional farming practices often lead to environmental challenges like soil degradation, excessive fertilizer use, and water wastage. By integrating Artificial Intelligence (AI) and data-driven technologies, this project aims to promote sustainable farming practices while improving productivity.
 
-**URL**: https://lovable.dev/projects/ceaa8663-28b6-4e0b-9d61-81fcfb27cfbb
+---
 
-## How can I edit this code?
+## 🚜 Challenge Overview
+The project involves developing a **multi-agent AI system** that connects key stakeholders in agriculture—farmers, weather stations, and agricultural experts. The goal is to optimize farming practices, reduce environmental impact, minimize water usage, and promote long-term sustainability.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🎯 Objectives
+- Reduce carbon footprint and mitigate soil erosion.
+- Provide sustainable fertilizer recommendations.
+- Assist farmers with smart, data-driven decisions.
+- Enable collaboration among AI agents for optimal farming outcomes.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ceaa8663-28b6-4e0b-9d61-81fcfb27cfbb) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🤝 Stakeholders and Agents
 
-**Use your preferred IDE**
+### 1. **Farmer Advisor Agent**
+   - Analyzes crop, land, and financial inputs from farmers.
+   - Suggests crop rotations and sustainable farming practices.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 2. **Market Researcher Agent**
+   - Evaluates regional demand, crop pricing trends, and market fluctuations.
+   - Recommends high-demand and profitable crops.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 3. **Weather Monitoring Agent**
+   - Integrates real-time weather data.
+   - Advises on the best planting/harvesting windows.
 
-Follow these steps:
+### 4. **Smart Fertilizer Advisor Agent** *(Newly Proposed)*
+   - Uses environmental and historical data to recommend optimal fertilizer type and quantity.
+   - Minimizes overuse and reduces runoff pollution.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🏗️ System Architecture
+The system architecture involves multiple agents working collaboratively:
+1. **Farmer Input** → Farmer Advisor Agent
+2. **Weather API** → Weather Monitoring Agent
+3. **Market Data** → Market Researcher Agent
+4. All data is processed by a **Central Decision Engine**, which outputs recommendations to a **Mobile Application**.
+5. Long-term data is stored in an **SQLite Database**.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## ✨ Key Features
 
-**Edit a file directly in GitHub**
+### a. Real-Time Data Integration
+- Connects to APIs for weather, soil moisture, and market trends.
+- Enables timely and accurate decision-making.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### b. Personalized Recommendations
+- Tailored advice based on land profile, crop selection, and environmental factors.
+- Customized fertilizer, irrigation, and crop schedules.
 
-**Use GitHub Codespaces**
+### c. Machine Learning Optimization
+- Learns from historical patterns (yield, input-output).
+- Continuously improves recommendations over time.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### d. Offline Support
+- Local data syncing ensures app functionality without an internet connection.
+- Data is queued for upload when connectivity is restored.
 
-## What technologies are used for this project?
+### e. Sustainability Metrics Dashboard
+- Tracks fertilizer usage reduction, water savings, and yield improvements.
+- Provides visual feedback for farmers.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🛠️ Technical Stack
 
-## How can I deploy this project?
+| Component       | Technology                     |
+|------------------|--------------------------------|
+| **Frontend**     | React Native (mobile app)      |
+| **Backend**      | Node.js + Express.js           |
+| **Database**     | SQLite (persistent local storage) |
+| **ML Framework** | TensorFlow Lite or scikit-learn |
+| **APIs**         | OpenWeatherMap API, SoilGrids API, Market Data API |
 
-Simply open [Lovable](https://lovable.dev/projects/ceaa8663-28b6-4e0b-9d61-81fcfb27cfbb) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 📂 SQLite Database Schema
 
-Yes it is!
+| Table Name              | Description                                           |
+|--------------------------|-------------------------------------------------------|
+| `Farmers`               | Stores farmer details (id, name, land size, location). |
+| `Crops`                 | Tracks crop details (id, name, season, yield per acre).|
+| `Fertilizer_Recommendations` | Records fertilizer advice (id, crop_id, recommendation). |
+| `Weather_History`       | Logs weather data (id, date, temperature, rainfall).   |
+| `Market_Trends`         | Monitors market demand and pricing trends (id, crop_id).|
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📱 UI Mockups
+
+### 1. **Home Screen**
+   - Quick access to crop planner, recommendations, weather updates.
+
+### 2. **Fertilizer Recommendation Screen**
+   - Inputs: Crop type, soil data (optional), location.
+   - Outputs: Type of fertilizer, quantity required, schedule.
+
+### 3. **Crop Planner**
+   - Monthly view of recommended crops and actions.
+   - Progress tracking for each field.
+
+### 4. **Market Trends**
+   - Graphs showing price trends and demand scores.
+
+### 5. **Sustainability Dashboard**
+   - Metrics: Water saved 🌊, fertilizer usage reduced 🧪, yield improvement 🌾.
+
+---
+
+## 🚀 Future Enhancements
+1. Expand AI agents to include pest control recommendations.
+2. Integrate drone-based field monitoring for real-time insights.
+3. Add blockchain-based traceability for crop supply chains.
+4. Support multilingual interfaces for wider accessibility.
+
+---
+
+## 🙌 Acknowledgments
+This project is inspired by the need for sustainable agricultural practices in the face of climate change challenges. Special thanks to the open-source community for providing tools like TensorFlow Lite and APIs like OpenWeatherMap that make this solution possible.
